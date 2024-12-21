@@ -9,13 +9,19 @@ const Cube = () => {
     useFrame(() => {
         if  (isCliked) {
             meshRef.current.rotation.x += 0.05;
-            meshRef.current.rotation.y += 0.1;
+            meshRef.current.rotation.y += 0.01;
         }
     });
 
     return (
-        <mesh ref={meshRef} onClick={() => setIsClicked(!isCliked)} position={[-2, 0, 0]}>
-            <boxGeometry args={[1, 1, 1]} />
+        <mesh 
+            ref={meshRef} 
+            onClick={() => setIsClicked(!isCliked)} 
+            position={[0, 0, 0]}
+            castShadow
+            
+        >
+            <boxGeometry args={[2, 2, 2]} />
             <meshStandardMaterial color="blue" />
         </mesh>
     );
