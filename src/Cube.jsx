@@ -18,6 +18,10 @@ const Cube = () => {
                 <boxGeometry />
                 <meshNormalMaterial />
             </mesh>
+            <mesh position={[2, 2, -5]}>
+                <boxGeometry />
+                <meshNormalMaterial />
+            </mesh>
         </group>
     )
 }
