@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import Basic from './Basic'
 import Cube from './Cube'
 import { OrbitControls } from '@react-three/drei'
+import CustomGeometry from './CustomGeometry';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       >
         <OrbitControls/>
         <Cube></Cube>
+        <CustomGeometry></CustomGeometry>
       </Canvas>
     </div>
   )
