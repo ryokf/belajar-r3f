@@ -1,8 +1,10 @@
-import { useFrame } from '@react-three/fiber'
+import { useFrame, useLoader } from '@react-three/fiber'
 import React from 'react'
+import * as THREE from 'three'
 
 const Cube = () => {
     const cubeRef = React.useRef()
+    const texture = useLoader(THREE.TextureLoader, './texture/texture.jpg')
 
     // useFrame is a hook that allows you to schedule a function to be called at each frame rendered by the renderer.
     // The function takes two arguments: state and delta. state is an object containing information about the current state of the renderer, delta is the time in seconds since the last frame.
@@ -16,7 +18,7 @@ const Cube = () => {
         <group>
             <mesh ref={cubeRef}>
                 <boxGeometry />
-                <meshNormalMaterial />
+                <meshBasicMaterial map={texture}/>
             </mesh>
             <mesh position={[2, 2, -5]}>
                 <boxGeometry />
