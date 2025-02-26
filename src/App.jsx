@@ -5,21 +5,31 @@ import Cube from './Cube'
 import { OrbitControls } from '@react-three/drei'
 import CustomGeometry from './CustomGeometry';
 import Snowfall from './Snowfall';
+import Model from './Model'
+import { Suspense } from 'react'
+import { Perf } from 'r3f-perf'
 
 function App() {
 
   return (
     <div className='h-screen flex justify-center items-center'>
       <Canvas
-        camera={{ zoom: 50, position: [0, 0, 10], far: 100, near: 0.1 }}
-        gl={{ antialias: true }}
-        onCreated={(state)=>{
+        onCreated={(state) => {
           // cara mengganti warna latar belakang
           state.gl.setClearColor('#123123')
-        }}  
+        }}
       >
-        <Snowfall></Snowfall>
+        <Suspense fallback={
+          <mesh>
+            <boxGeometry />
+            <meshNormalMaterial wireframe />
+          </mesh>
+        }>
+
+          <Model></Model>
+        </Suspense>
         <OrbitControls />
+        <Perf></Perf>
       </Canvas>
     </div>
   )
