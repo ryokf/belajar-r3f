@@ -4,13 +4,13 @@ import Basic from './Basic'
 import Cube from './Cube'
 import { OrbitControls } from '@react-three/drei'
 import CustomGeometry from './CustomGeometry';
+import Snowfall from './Snowfall';
 
 function App() {
 
   return (
     <div className='h-screen flex justify-center items-center'>
       <Canvas
-        orthographic 
         camera={{ zoom: 50, position: [0, 0, 10], far: 100, near: 0.1 }}
         gl={{ antialias: true }}
         onCreated={(state)=>{
@@ -18,9 +18,8 @@ function App() {
           state.gl.setClearColor('#123123')
         }}  
       >
-        <OrbitControls/>
-        <Cube></Cube>
-        <CustomGeometry></CustomGeometry>
+        <Snowfall></Snowfall>
+        <OrbitControls />
       </Canvas>
     </div>
   )
