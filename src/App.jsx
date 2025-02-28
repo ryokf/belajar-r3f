@@ -8,26 +8,18 @@ import Snowfall from './Snowfall';
 import Model from './Model'
 import { Suspense } from 'react'
 import { Perf } from 'r3f-perf'
+import Lighting from './Lighting';
 
 function App() {
 
   return (
     <div className='h-screen flex justify-center items-center'>
       <Canvas
-        onCreated={(state) => {
-          // cara mengganti warna latar belakang
-          state.gl.setClearColor('#123123')
-        }}
+        shadows
+        orthographic
+        camera={{ zoom: 50, position: [0, 0, 5] }}
       >
-        <Suspense fallback={
-          <mesh>
-            <boxGeometry />
-            <meshNormalMaterial wireframe />
-          </mesh>
-        }>
-
-          <Model></Model>
-        </Suspense>
+        <Lighting></Lighting>
         <OrbitControls />
         <Perf></Perf>
       </Canvas>

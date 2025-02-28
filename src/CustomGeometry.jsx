@@ -1,5 +1,3 @@
-import React from 'react'
-
 const CustomGeometry = () => {
     const arrayPosition = new Float32Array(
         [0,0,0,0,1,0,1,0,0]
