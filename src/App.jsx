@@ -11,15 +11,16 @@ import { Perf } from 'r3f-perf'
 import Lighting from './Lighting';
 import Debugging from './Debugging';
 import EnvironmentStaging from './EnvironmentStaging';
+import Camera from './Camera';
 
 function App() {
 
   return (
     <div className='h-screen flex justify-center items-center'>
       <Canvas>
-        <EnvironmentStaging></EnvironmentStaging>
+        <Camera></Camera>
         <OrbitControls />
-        <Perf></Perf>
+        {/* <Perf></Perf> */}
       </Canvas>
     </div>
   )
