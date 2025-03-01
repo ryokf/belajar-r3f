@@ -9,19 +9,16 @@ import Model from './Model'
 import { Suspense } from 'react'
 import { Perf } from 'r3f-perf'
 import Lighting from './Lighting';
+import Debugging from './Debugging';
 
 function App() {
 
   return (
     <div className='h-screen flex justify-center items-center'>
-      <Canvas
-        shadows
-        orthographic
-        camera={{ zoom: 50, position: [0, 0, 5] }}
-      >
-        <Lighting></Lighting>
+      <Canvas>
+        <Debugging></Debugging>
         <OrbitControls />
-        <Perf></Perf>
+        {/* <Perf></Perf> */}
       </Canvas>
     </div>
   )
