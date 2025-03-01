@@ -10,15 +10,16 @@ import { Suspense } from 'react'
 import { Perf } from 'r3f-perf'
 import Lighting from './Lighting';
 import Debugging from './Debugging';
+import EnvironmentStaging from './EnvironmentStaging';
 
 function App() {
 
   return (
     <div className='h-screen flex justify-center items-center'>
       <Canvas>
-        <Debugging></Debugging>
+        <EnvironmentStaging></EnvironmentStaging>
         <OrbitControls />
-        {/* <Perf></Perf> */}
+        <Perf></Perf>
       </Canvas>
     </div>
   )
