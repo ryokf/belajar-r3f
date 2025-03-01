@@ -12,13 +12,14 @@ import Lighting from './Lighting';
 import Debugging from './Debugging';
 import EnvironmentStaging from './EnvironmentStaging';
 import Camera from './Camera';
+import Controls from './Controls'
 
 function App() {
 
   return (
     <div className='h-screen flex justify-center items-center'>
       <Canvas>
-        <Camera></Camera>
+        <Controls></Controls>
         <OrbitControls />
         {/* <Perf></Perf> */}
       </Canvas>
