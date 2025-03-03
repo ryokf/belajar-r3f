@@ -15,13 +15,14 @@ import Camera from './Camera';
 import Controls from './Controls'
 import ScrollControl from './ScrollControl'
 import TextHtml from './TextHtml'
+import DistortMaterial from './DistortMaterial';
 
 function App() {
 
   return (
     <div className='h-screen flex justify-center items-center bg-black'>
       <Canvas>
-        <TextHtml></TextHtml>
+        <DistortMaterial></DistortMaterial>
         <OrbitControls />
         {/* <Perf></Perf> */}
       </Canvas>

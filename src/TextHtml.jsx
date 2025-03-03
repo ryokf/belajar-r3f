@@ -24,8 +24,6 @@ const TextHtml = () => {
                 <boxGeometry args={[1, 1, 1]} />
                 <meshBasicMaterial color='red' />
             </mesh>
-
-
         </>
     )
 }
