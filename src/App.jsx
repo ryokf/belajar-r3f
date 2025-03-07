@@ -17,13 +17,14 @@ import ScrollControl from './ScrollControl'
 import TextHtml from './TextHtml'
 import DistortMaterial from './DistortMaterial';
 import PortalMaterial from './PortalMaterial';
+import ReactSpring from './ReactSpring';
 
 function App() {
 
   return (
     <div className='h-screen flex justify-center items-center'>
       <Canvas>
-        <PortalMaterial></PortalMaterial>
+        <ReactSpring></ReactSpring>
         <OrbitControls />
         {/* <Perf></Perf> */}
       </Canvas>
