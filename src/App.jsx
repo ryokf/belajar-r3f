@@ -18,13 +18,14 @@ import TextHtml from './TextHtml'
 import DistortMaterial from './DistortMaterial';
 import PortalMaterial from './PortalMaterial';
 import ReactSpring from './ReactSpring';
+import PhysicsScene from './PhysicsScene'
 
 function App() {
 
   return (
     <div className='h-screen flex justify-center items-center'>
       <Canvas>
-        <ReactSpring></ReactSpring>
+        <PhysicsScene></PhysicsScene>
         <OrbitControls />
         {/* <Perf></Perf> */}
       </Canvas>
